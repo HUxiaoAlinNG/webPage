@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网易教育产品部</title>
+	<meta name="keywords" content="网易教育、网易公开课、云课堂、中国大学MOOC、视频教程、学习编程"/> 
+	<meta name="description" content="网易教育产品部是网易致力于推广线上教育的重要机构"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<!-- 顶部通知条 -->
+	<div id="topTips">
+		<div class="container">
+			<p>网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！ <a href="http://study.163.com/smartSpec/intro.htm#/smartSpecIntro" target="_blank">立即查看&gt;</a><span id="closeTips">X &nbsp;&nbsp;不再提醒</span></p>
+		</div>
+	</div>
+
+	<!-- 头部 -->
+	<div class="header">
+		<div class="container">
+			<p class="logo">
+				<span class="logoEDU">EDU</span>网易教育产品部
+			</p>
+			<span id="follow">+ 关注</span>
+			<span id="followSuc">&nbsp;&radic;&nbsp;已关注
+				<span id="cancel">取消</span>
+			</span>
+			<span class="funs">粉丝 45</span>
+			<!-- 登录遮罩层 -->
+			<div id="mask"></div>
+			<!-- 登录弹框 -->
+			<div id="login">
+				<form class="loginForm">
+					<div id="closeLogin">×</div>
+					<h3>登录网易云课堂</h3>
+					<input type="text" name="userName" id="userName" placeholder="账号">
+					<input type="password" name="password" id="password" placeholder="密码">
+					<button id="loginButton">登录</button>
+				</form>	
+			</div>
+			<div class="nav">
+				<a href="http://open.163.com/" target="_blank">网易公开课</a>
+				<a href="http://study.163.com/" target="_blank">云课堂</a>
+				<a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a>
+				<span class="search"></span>
+			</div>
+		</div>
+	</div>	
+
+	<!-- 清除浮动 -->
+	<br class="clearFloat">
+
+	<!-- 轮播图 -->
+	<div class="banner">
+		<ul class="bannerList">
+			<li class="firstBanner">
+				<a href="http://open.163.com/" target="_blank">
+					<img src="imgs/banner1.jpg" alt="banner1">
+				</a>
+			</li>
+			<li>
+				<a href="http://study.163.com/" target="_blank">
+					<img src="imgs/banner2.jpg" alt="banner2">
+				</a>
+			</li>
+			<li>
+				<a href="http://www.icourse163.org/" target="_blank">
+					<img src="imgs/banner3.jpg" alt="banner3">
+				</a>
+			</li>
+		</ul>
+		<ul class="controlList">
+			<li class="firstControl"></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+	<!-- 学习平台介绍 -->
+	<div class="platform">
+		<div class="container">
+			<div class="platformLeft">
+				<div class="weblogo"><img src="imgs/open.png" alt="网易公开课logo"></div>
+				<div class="platformText">
+					<h2>网易公开课</h2>
+					<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+					<a href="http://open.163.com/" target="_blank">了解更多 &gt;</a>
+				</div>
+			</div>
+			<div class="platformCenter">
+				<div class="weblogo"><img src="imgs/study.png" alt="云课堂logo"></div>
+				<div class="platformText">
+					<h2>云课堂</h2>
+					<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+					<a href="http://study.163.com/" target="_blank">了解更多 &gt;</a>
+				</div>
+			</div>
+			<div class="platformRight">
+				<div class="weblogo"><img src="imgs/icourse.png" alt="中国大学MOOC logo"></div>
+				<div class="platformText">
+					<h2>中国大学MOOC</h2>
+					<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+					<a href="http://www.icourse163.org/" target="_blank">了解更多 &gt;</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 图片墙 -->
+	<div class="photoWall">
+		<ul class="showPhoto">
+			<li><img src="imgs/picture1.jpg" alt="图片展示1"></li>
+			<li><img src="imgs/picture2.jpg" alt="图片展示2"></li>
+			<li><img src="imgs/picture3.jpg" alt="图片展示3"></li>
+			<li><img src="imgs/picture4.jpg" alt="图片展示4"></li>
+			<li class="showpicLast"><img src="imgs/picture5.jpg" alt="图片展示5"></li>
+		</ul>
+	</div>
+	
+	<!-- 主内容区 -->
+	<div class="content">
+		<div class="container">	
+				<!-- 左列内容区 -->
+				<div class="contentLeft">
+					<div id="contentLeftTitle">
+						<h3 class="product current">产品设计</h3>
+						<h3 class="program">编程语言</h3>
+					</div>
+					<div class="classlist">
+						<!-- 获取课程列表 -->
+						<ul class="course"></ul>
+					</div>
+					<!-- 页数 -->
+					<ul class="pagination">
+						<li class="ele btn">&lt;</li>
+						<li class="ele">1</li>
+						<li class="ele">2</li>
+						<li class="ele">3</li>
+						<li class="ele">4</li>
+						<li class="ele">5</li>
+						<li class="ele">6</li>
+						<li class="ele">7</li>
+						<li class="ele">8</li>
+						<li class="ele btn">&gt;</li>
+					</ul>
+				</div>
+				<!-- 右侧内容区 -->
+				<div class="contentRight">
+					<!-- 视频 -->
+					<div id="rightVideo">
+						<h3 class="rightTitle">机构介绍</h3>
+						<p>观看下面的视频来了解吧：</p>
+						<img src="imgs/video.jpg" alt="机构介绍" id="videoImg">
+					</div>
+					<!-- 视频弹窗 -->
+					<div id="watchVideo">
+						<span id="closeVideo">X</span>
+						<p>请观看下面的视频</p>
+						<video src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" controls autobuffer id="video">您的浏览器不支持video标签,请更换浏览器，谢谢！</video>
+					</div>	
+					<!-- 最热排行榜 -->
+					<div id="contentRightList">
+						<h3 class="rightTitle">最热排行</h3>
+						<!-- 获取最热排行 -->
+						<ul id="hotList"></ul>
+					</div>
+				</div>
+		</div>
+	</div>	
+		
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="container">
+			<!-- 备案信息 -->
+			<div class="footerInfo">
+				<p class="logo"><span class="logoEDU">EDU</span>网易教育产品部</p>
+				<p class="footerInfoA">&copy; 2014 icourse163.org 浙ICP备08114786号-1</p>
+				<p>icourse.cn 京ICP备12020869号-2 京公安网备110102000459-2</p>
+			</div>
+			<!-- 链接 -->
+			<div class="footerLink">
+				<div class="footerLinkItems">
+					<p>友情链接：</p>
+					<a href="http://open.163.com/" target="_blank">网易公开课</a>
+					<a href="http://study.163.com/" target="_blank">网易云课堂</a>
+					<a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a>
+				</div>
+				<div class="footerLinkItems">
+					<p>我们：</p>
+					<a href="#" target="_blank">关于</a>
+					<a href="#" target="_blank">联系</a>
+					<a href="#" target="_blank">关注<img src="imgs/weibo.png" title="weibo" class="weiboLogo"></a>
+				</div>
+				<div class="footerLinkItems">
+					<p>更多：</p>
+					<a href="#" target="_blank">常见问题</a>
+					<a href="#" target="_blank">意见反馈</a>
+				</div>
+			</div>
+		</div>
+	</div>
+ <script type="text/javascript" src="js/md5.min.js"></script>
+ <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

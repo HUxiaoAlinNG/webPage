@@ -1,0 +1,669 @@
+/* css reset */
+	html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+	header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+	table{border-collapse:collapse;border-spacing:0;}
+	caption,th{text-align:left;font-weight:normal;}
+	html,body,fieldset,img,iframe,abbr{border:0;}
+	i,cite,em,var,address,dfn{font-style:normal;}
+	[hidefocus],summary{outline:0;}
+	li{list-style:none;}
+	h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+	sup,sub{font-size:83%;}
+	pre,code,kbd,samp{font-family:inherit;}
+	q:before,q:after{content:none;}
+	textarea{overflow:auto;resize:none;}
+	label,summary{cursor:default;}
+	a,button{cursor:pointer;}
+	button{border:none;}
+	h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+	del,ins,u,s,a,a:hover{text-decoration:none;}
+	body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,simsun;color:#333;outline:0;}
+	body{background:#fff;font-family: "Arial","Hiragino Sans GB", "Helvetica", "sans-serif";}
+	a,a:hover{color:#333;}
+
+/* main样式 */
+.container{
+	width: 1205px;
+	margin: 0 auto;
+}
+/* 设置宽窄屏适应布局 */
+@media screen and (max-width: 1205px){
+	.container{
+		width: 960px;
+	}
+}
+/* 定义清除浮动 */
+.clearFloat{
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	display: none;
+}
+/* 顶部通知条 */
+#topTips{
+	background-color: #f3f3f3;
+	height: 36px;
+	font-size: 12px;
+	line-height: 35px;
+	color: #333;
+}
+#topTips .container p a{
+	color: #21a557;
+}
+#topTips .container p #closeTips{
+	float: right;
+	cursor: pointer;
+}
+
+/* 头部-logoEDU */
+.header{
+	line-height: 90px;
+}
+.header .container .logo{
+	float: left;
+	color: #333;
+	font-size: 22px;
+	font-weight: bold;
+}
+.header .container .logo .logoEDU{
+	color: #39a030;
+	border-right:1px solid #39a030;
+	padding-right: 10px;
+	margin-right: 15px;
+
+}
+/* 头部-关注 */
+.header .container #follow{
+	float: left;
+	width: 55px;
+	height: 22px;
+	background-color: #21a557;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 22px;
+	text-align: center;
+	margin: 34px 15px 34px 32px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.header .container #follow:hover{
+	background-color: #2fb556;
+}
+/* 头部-已关注 */
+.header .container #followSuc{
+	float: left;	
+	display: none;
+	width: 105px;
+	height: 20px;
+	background-color: #f8f8f8;
+	color: #333;
+	font-size: 14px;
+	line-height: 22px;	
+	border: 1px solid #efefef;
+	margin: 34px 15px 34px 32px;
+	border-radius: 3px;
+}
+.header .container #cancel{
+	float: right;
+	display: inline-block;
+	width: 40px;
+	text-align: center;
+	color: #999;
+	cursor: pointer;
+	border-left: 1px solid #ccc;
+
+}
+.header .container #cancel:hover{
+	text-decoration: underline;
+	color: #21a557;
+}
+/* 头部-粉丝 */
+.header .container .funs{
+	color: #666;
+	font-size: 12px;
+}
+/* 头部-登录遮罩层 */
+.header .container #mask{
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: gray;
+	filter:alpha(opacity=70); /*IE滤镜，不透明度70%*/
+	-moz-opacity:0.7; /*Firefox私有，不透明度70%*/
+	opacity:0.7;/*其他，不透明度70%*/
+}
+/* 头部-登陆弹窗 */
+.header .container #login{
+	position: absolute;
+	display: none;
+	width: 387px;
+	height: 288px;
+	left: 50%;
+	top: 50%;
+	margin-top: -144px;
+	margin-left: -193px;
+	background-color: #fff;
+	z-index: 20;
+}
+.header .container #login .loginForm h3{
+	padding: 20px 0 10px 38px;
+    font: bold 18px/38px 'Microsoft YaHei';
+    color: #444;
+}
+.header .container #login .loginForm #userName,.header .container #login .loginForm #password{
+	display: block;
+	width: 293px;
+	height: 43px;
+	margin: 0 0 30px 40px;
+}
+.header .container #login .loginForm #loginButton{
+	display: block;
+	margin: 0 0 30px 40px;
+	width: 293px;
+	height: 46px;
+	background-color: #39a030;
+	box-shadow: 1px 1px 0 1px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+}
+.header .container #login #closeLogin{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	cursor: pointer;
+	line-height: 34px;
+	margin-left: 367px;
+}
+
+/* 头部-导航 */
+.header .container .nav{
+	float: right;
+	color: #666;
+	font-size: 16px;
+}
+.header .container .nav a{	
+	margin-left: 55px;
+}
+.header .container .nav a:hover{
+	color: #39a030;
+}
+/* 头部-导航-搜索图标 */
+.header .container .nav .search{
+	display: inline-block;
+	margin-left: 30px;
+	line-height: 1;
+	width: 20px;
+	height: 20px;
+	background: url(../imgs/search.png) no-repeat;
+}
+.header .container .nav .search:hover {
+	background: url(../imgs/search-hover.png) no-repeat;
+}
+
+/*轮播图*/
+.banner{
+	position: relative;
+	height: 460px;	
+	overflow: hidden;
+}
+.banner .bannerList li{
+	display: none;
+	position: relative;	
+	filter:alpha(opacity=0); /*IE滤镜，不透明度0*/
+	-moz-opacity:0; /*Firefox私有，不透明度0*/
+	opacity:0;/*其他，不透明度0*/
+	width: 100%;
+	text-align: center;
+}
+.banner .bannerList li a{
+	display: inline-block;
+}
+.banner .bannerList .firstBanner{
+	display: inline-block;
+	filter:alpha(opacity=100); /*IE滤镜，不透明度100%*/
+	-moz-opacity:1; /*Firefox私有，不透明度100%*/
+	opacity:1;/*其他，不透明度100%*/
+}
+.banner .controlList{
+	position: absolute;
+	bottom: 20px;
+	right: 50%;
+	width: 60px;
+	height: 10px;
+}
+.banner .controlList li{
+	float: left;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	margin-right: 10px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.banner .controlList .firstControl{
+	background-color: #333;
+}
+
+/* 学习平台介绍 */
+.platform{
+	height: 235px;
+	margin-top: 60px;
+}
+.platform .container .platformLeft,.platform .container .platformCenter,.platform .container .platformRight{	
+	float: left;
+	width:345px;
+}
+.platform .container .platformLeft,.platform .container .platformCenter{
+	margin-right: 80px;
+}
+.platform .container div .weblogo{
+	float: left;
+	margin-right: 20px;
+	height: 180px;
+}
+.platform .container div .platformText p{	
+	font-size: 14px;
+	line-height: 24px;
+	color: #666;
+	margin-bottom: 20px;
+}
+.platform .container div .platformText h2{
+	font-size: 22px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+.platform .container div .platformText a{
+	font-size: 14px;
+	line-height: 24px;
+	color: #39a030;
+}
+.platform .container div .platformText a:hover{
+	text-decoration: underline;
+}
+
+/*简介-自适应布局*/
+@media screen and (max-width: 1205px){
+	.platform .container .platformLeft,.platform .container .platformCenter,.platform .container .platformRight{
+		width: 270px;		
+	}
+	.platform .container .platformLeft,.platform .container .platformCenter{
+		margin-right: 60px;
+	}
+	.platform .container div .platformText{
+		float: right;
+		width: 170px;
+	}
+}
+/* 图片墙 */
+.photoWall{
+	clear: both;
+	position: relative;
+	overflow: hidden;
+	height: 224px;
+	background-color: #f8f8f8;
+	padding-top: 2px;
+}
+.photoWall .showPhoto{
+	position: absolute;
+	width: 1620px;
+	left: 50%;
+	margin-left: -810px;
+}
+.photoWall .showPhoto li{
+	float: left;
+	margin-right: 5px;	
+}
+.photoWall .showPhoto .showpicLast{
+	margin-right: 0px;
+}
+.photoWall .showPhoto li img{	
+	width: 320px;
+	height: 220px;
+}
+
+/* 主内容区 */
+.content{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	overflow: hidden;
+	background-color: #f8f8f8;	
+}
+/* 左列内容区-标题 */
+.content .container .contentLeft{
+	float: left;
+	width: 980px;
+	position: relative;
+}
+.content .container .contentLeft #contentLeftTitle{
+	margin-bottom: 30px;
+}
+.content .container .contentLeft #contentLeftTitle h3{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #fff;
+	color: #666;
+	display: inline-block;
+	cursor: pointer;	
+	box-shadow: 0 1px 2px #ecebeb;
+}
+.content .container .contentLeft #contentLeftTitle h3+h3{
+	margin-left: -3px;
+}
+.content .container .contentLeft #contentLeftTitle h3:hover{
+	background-color: #39a030;
+	color: #fff;
+}
+.content .container .contentLeft #contentLeftTitle .current{
+	background-color: #39a030;
+	color: #fff;
+}
+/*左侧内容区自适应布局*/
+@media screen and (max-width: 1205px){
+	.content .container .contentLeft{
+		width: 730px;
+	}
+}
+/* 左列内容区-课程表 */
+.course{
+	position: relative;
+}
+.course .courseLi{
+	float: left;
+	position: relative;
+	margin: 0 20px 40px 0;
+	width: 223px;
+	font-size: 12px;
+	background-color: #fff;
+	box-shadow: 0 1px 1px #ccc;
+	cursor: pointer;
+}
+.course .courseLi img{
+	width: 223px;
+	height: 124px;
+}
+.course .courseLi:hover{
+	box-shadow: 0 1px 2px 2px #bbb;
+}
+.course .courseLi .title{
+	margin: 10px 5px 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #333;
+}
+.course .courseLi:hover .title{
+	color: #39a030;
+}
+.course .courseLi .orgName{
+	margin: 10px 5px 0;
+	color: #999;
+}
+.course .courseLi .hot{
+	display: inline-block;
+	margin: 10px 5px 0;
+	padding: 0 4px 0 18px;
+	height: 18px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	font-size: 10px;
+	line-height: 20px;
+	color: #999;
+	background: url(../imgs/user.png) no-repeat 0 1px;
+}
+.course .courseLi .discount{
+	margin: 10px 5px;
+	color: #ff3f00;
+}
+/* 左列内容区-课程浮层 */
+.course .courseLi .courseInfo{
+	position: absolute;
+/*	left: 243px;*/
+	left: 0;
+	top: 0;
+	width: 470px;
+	box-shadow: 0 0 5px #bbb;
+	background-color: #fff;
+	z-index: 100;	
+	display: none;
+}
+.course .courseLi .courseInfo .uHead{
+	padding: 20px;
+}
+.course .courseLi .courseInfo .pic{
+	float: left;
+}
+.course .courseLi .courseInfo .uInfo{
+	float: right;
+	width: 187px;
+}
+.course .courseLi .courseInfo .uTit{
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.course .courseLi .courseInfo .uHot{
+	padding-left: 20px;
+	height: 16px;
+	line-height: 16px;
+	background: url(../imgs/user.png) no-repeat;
+	font-size: 12px;
+	margin-bottom: 10px;
+	color: #666;
+}
+.course .courseLi .courseInfo .uPub{
+	margin-bottom: 10px;
+	color: #666;
+}
+.course .courseLi .courseInfo .uCategory{
+	color: #666;
+	margin-bottom: 20px;
+}
+.course .courseLi .courseInfo .uIntro{
+	clear: both;
+	padding: 10px 20px 10px;
+	margin-top: 20px;
+	background-color: #f8f8f8;
+	font-size: 16px;
+	line-height: 24px;
+	color: #666;
+	box-shadow: 0 1px 5px #bbb;
+}
+/* 左列内容区-页数 */
+.content .container .contentLeft .pagination{
+	float: right;
+	margin: 0 16px 120px 0;
+	font-size: 14px;
+	color: #666;
+}
+.content .container .contentLeft .pagination .ele{
+	float: left;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.content .container .contentLeft .pagination .ele:hover{
+	color: #fff;
+	background-color: #9fd7b2;
+}
+.content .container .contentLeft .pagination .on{
+	color: #9fd7b2;
+}
+.content .container .contentLeft .pagination .btn{
+	width: 30px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background-color: #9fd7b2;
+}
+
+
+/* 右列内容区 */
+.content .container .contentRight{
+	float: right;
+	overflow: hidden;
+	width: 225px;
+}
+.content .container .contentRight div .rightTitle{
+	height: 55px;
+	line-height: 55px;
+	font-size: 18px;
+	padding-left: 20px;
+	color: #333;
+	background-color: #fff;
+	box-shadow: 0 1px 2px #ecebeb;
+}
+/* 右列内容区-视频 */
+.content .container .contentRight #rightVideo{
+	height: 230px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	box-shadow: 0 1px 2px #ecebeb;
+}
+.content .container .contentRight #rightVideo p{
+	color: #666;
+	margin-top: 20px;
+	margin-left: 22px;
+}
+.content .container .contentRight #rightVideo #videoImg{
+	margin-top: 10px;
+	margin-left: 22px;
+	cursor: pointer;
+}
+/* 右列内容区-视频弹窗 */
+.content .container .contentRight #watchVideo{
+	position: fixed;
+	display: none;
+	width: 800px;
+	height: 500px;
+	left: 50%;
+	top: 50%;
+	margin-left: -430px;
+	margin-top: -261px;
+	z-index: 110;
+}
+.content .container .contentRight #watchVideo p{
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-left: 50px;
+}
+.content .container .contentRight #watchVideo #video{
+	width: 700px;
+	display: block;
+	margin: 10px auto;
+}
+.content .container .contentRight #watchVideo #closeVideo{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	cursor: pointer;
+}
+/* 右列内容区-最热排行榜 */
+.content .container .contentRight #contentRightList{
+	box-shadow: 0 1px 2px #ecebeb;	
+}
+.content .container .contentRight #contentRightList #hotList{
+	margin-top: 1px;
+	box-shadow: 0 1px 2px #ecebeb;
+	background-color: #fff;
+}
+.content .container .contentRight #contentRightList #hotList .hotListLi{
+	padding: 22px;	
+	cursor: pointer;
+}
+.content .container .contentRight #contentRightList #hotList:hover{
+	box-shadow: 0 1px 2px #bbb;
+}
+.content .container .contentRight #contentRightList #hotList .hotListPic{
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-right: 12px;
+}
+.content .container .contentRight #contentRightList #hotList .hotListTitle{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+.content .container .contentRight #contentRightList #hotList .hotListUserCount{
+	margin-top: 12px;
+	background: #fff url("../imgs/user.png") no-repeat;
+	font-size: 12px;
+	color: #999;
+	display: inline-block;
+	height: 18px;
+	padding: 2px 0 0 18px;
+}
+
+/* 底部 */
+.footer{
+	height: 260px;
+	background-color: #2c3339;
+	color: #a2a4a5;
+	font-size: 12px;
+}
+.footer .container{
+	width: 1000px;
+}
+.footer .container .footerInfo{
+	margin-top: 90px;
+	float: left;
+}
+.footer .container .footerInfo .logo{
+	font-size: 22px;
+	line-height: 40px;
+	font-weight: bold;
+	color: #39a030;
+	margin-bottom: 20px;
+}
+.footer .container .footerInfo .logo .logoEDU{
+	border-right:1px solid #39a030;
+	padding-right: 10px;
+	margin-right: 15px;
+}
+.footer .container .footerInfo .footerInfoA{
+	margin-bottom: 15px;
+}
+.footer .container .footerLink{
+	float: right;
+	margin-top: 80px;
+}
+.footer .container .footerLink .footerLinkItems{
+	float: left;
+	margin-left: 100px;
+	font-weight: bold;
+}
+.footer .container .footerLink .footerLinkItems a{
+	display: block;
+	margin-top: 16px;	
+	font-size: 14px;
+	font-family: 'heiti';
+	color: #a2a4a5;
+}
+.footer .container .footerLink .footerLinkItems a:hover{
+	text-decoration: underline;
+}
+.footer .container .footerLink .footerLinkItems .weiboLogo{
+	margin-left: 10px;
+}
